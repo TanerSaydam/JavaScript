@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Output</h1>
+    <ul>
+        <li><del>InnerHtml - InnerText</del></li>
+        <li><del>document.Write()</del></li>
+        <li><del>window.alert()</del></li>
+        <li>console.log()</li>
+    </ul>
+
+    <h1 onclick="changeResult('H1 elementi tıklandı')">My First Web Page</h1>
+    <p onclick="changeResult('P elementi tıklandı')">My First Paragraph</p>
+    
+    <p id="result"></p>
+
+    <button onclick="showMeAlert()">Toplama İşlemi Yap</button>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <hr>
+    <button onclick="showMeConsole()">Console'a Yaz</button>
+    <script>
+
+            document.write(5+6)
+
+        function showMeConsole(){
+            let a = 5;
+            let b = 10;
+            let c = 15;
+            let sum = (((a+b) * c) /2) - 15;
+            console.log(a+b);
+            console.log(a+b * c);
+        }
+
+        function showMeAlert(){
+            alert("Bu bir uyarı mesajıdır");
+        }
+
+        function changeResult(text){
+            document.getElementById("result").innerHTML = text;
+        }
+
+        // function changeResultWithH1(){
+        //     document.getElementById("result").innerHTML = "<h1>H1 elementi Tıklandı!!</h1>";
+        // }
+
+        // function changeResultWİdthP(){
+        //     document.getElementById("result").innerHTML = "<p style='color:red;'>P elementi tıklandı!!</p>";
+        // }
+    </script>
+</body>
+</html>

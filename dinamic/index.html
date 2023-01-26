@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dinamik Web Sitesi</h1>
+
+    <button 
+        onclick="lightOn()">
+        Lambayı Yak
+    </button>
+    <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+    <button 
+        onclick="lightOff()">
+        Lambayı Söndür
+    </button>
+
+    <script>
+        function lightOn(){
+            document.getElementById("myImage").src="https://www.w3schools.com/js/pic_bulbon.gif";
+        }
+
+        function lightOff(){
+            document.getElementById("myImage").src="https://www.w3schools.com/js/pic_bulboff.gif";
+        }
+    </script>
+</body>
+</html>
