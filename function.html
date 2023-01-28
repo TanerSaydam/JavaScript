@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Function</h1>
+    <pre>
+        <code>
+            function functionAdi(){
+                
+            }
+        </code>
+    </pre>
+
+    <div>
+        <h4>Tüketici Kredisi</h4>
+        Kredi Tutarı
+        <input id="krediTutari" type="text" name="" id="">
+        <br>
+        Taksit Adedi
+        <input id="taksitSayisi" type="text" name="" id="">
+        <br>
+        <button onclick="tuketiciCalc()">Hesapla</button>
+        <p id="sonuc"></p>
+    </div>
+    <hr>
+    <div>
+        <h4>Esnaf Kredisi</h4>
+        Kredi Tutarı
+        <input id="esnafKrediTutari" type="text" name="" id="">
+        <br>
+        Taksit Adedi
+        <input id="esnafTaksitSayisi" type="text" name="" id="">
+        <br>
+        <button onclick="esnafCalc()">Hesapla</button>
+        <p id="esnafSonuc"></p>
+    </div>
+    <script>
+        function tuketiciCalc() {
+            let number1 = document.getElementById("krediTutari").value;
+            let number2 = document.getElementById("taksitSayisi").value;
+
+            document.getElementById("sonuc").innerText = "Tüketici kredisi aylık taksit tutarı: " + krediHesapla(number1, number2,1.25);
+        }
+
+        function esnafCalc() {
+            let number1 = document.getElementById("esnafKrediTutari").value;
+            let number2 = document.getElementById("esnafTaksitSayisi").value;
+
+            document.getElementById("esnafSonuc").innerText = "Enas kredisi aylık taksik tutarı: " + krediHesapla(number1, number2,1.75);
+        }
+
+        function krediHesapla(krediTutari, taksitSayisi, tufeFaizi) {
+            let toplam = krediTutari / taksitSayisi;
+            const aylikTufeFaizi = tufeFaizi;
+            const toplamKrediTutarı = toplam * aylikTufeFaizi;
+            return toplamKrediTutarı;
+        }
+    </script>
+</body>
+
+</html>

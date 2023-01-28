@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+<script src="./node_modules/exceljs/dist/exceljs.js"></script>
+
+    <style>
+        div {
+            border: 1px solid;
+            width: 400px;
+            height: 200px;
+        }
+
+        .row {
+            content: "";
+            float: left;
+            width: 100%;
+            display: flex;
+        }
+
+        .col{
+            width: 50;
+        }
+
+        table, td, th{
+            border: 1px solid;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Object</h1>
+
+    <h2 id="h2"></h2>
+    <!-- <div class="row">
+        <div style="float: left; width: 25%;">
+            <img id="image" src="" alt="" width="100">
+        </div>
+        <div style="float: left; width: 75%;">
+            <table style="width: 100; border: 1px solid;">
+                <tr>
+                    <th>Araba Adı</th>
+                    <th>Araba Modeli</th>
+                    <th>Araba Ağırlığı</th>
+                    <th>Araba Rengi</th>
+                </tr>
+                <tr>
+                    <td id="nameTd"></td>
+                    <td id="modelTd"></td>
+                    <td id="weightTd"></td>
+                    <td id="colorTd"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+ -->
+
+    <!-- <button id="btn" onclick="gunleriYaz()">Günleri console a yaz</button> -->
+    <!-- <h2>Todo List</h2>
+    Yapılacak: <input type="text" id="todo" name="" id="">
+    <button onclick="addTodo()">Yapılacaklar Listesine Ekle</button>
+    <ul id="ulElement">
+
+    </ul> -->
+
+
+    <h2>Araba Ekleme Formu</h2>
+    <div class="row">
+        <div class="col">
+            Araba Adı:
+            <input  id="name">
+            <br>
+            Araba Modeli
+            <input id="model">
+            <br>
+            Araba Fiyatı
+            <input id="price">
+            <br>
+            Araba Resmi
+            <!-- <input id="imageInput" type="file" multiple onchange="showMeFile(event)"> -->
+            <input id="imageInput" onkeyup="setCarImage()">
+            <br>
+            <br>
+            <button onclick="addCar()">Arabayı Listeye Ekle</button>
+        </div>
+        <div class="col" style="display:flex">            
+            <img id="image" src="https://www.cumhuriyet.com.tr/Archive/2021/11/29/1888598/kapak_112247.jpg" alt="" width="250">            
+        </div>
+    </div>
+    <hr>
+    <button onclick="creatExcel()">Exceli indir</button>
+    <table id="table">
+        <tr>
+            <th>Adı</th>
+            <th>Modeli</th>
+            <th>Fiyatı</th>
+            <th>Resmi</th>
+            <th>İşlemler</th>
+        </tr>        
+    </table>
+
+    <script>
+        // function creatExcel(){
+        //     let XLSL;
+        //     let element = document.getElementById('table');
+        //     const wb = new ExcelJS.Workbook();
+
+        //     const ws = wb.addWorksheet('My Sheet');
+
+        //     ExcelJS.book_append_sheet(wb, ws, 'Sheet1');
+
+        //     let title = this.title;
+        //     title = title + ".xlsx";
+        //     XLSX.writeFile(wb, title);
+        // }
+
+
+        function setCarImage(event){
+            let imageInput = document.getElementById("imageInput").value;
+            let image = document.getElementById("image").src = imageInput;
+            //     console.log(event);
+            //     if(event.keyCode == 98){
+                
+            //     console.log(imageInput)
+            // }
+        }
+
+        function addCar(){
+            let car = {
+                name: document.getElementById("name"),
+                model: document.getElementById("model"),
+                price: document.getElementById("price"),
+                image: document.getElementById("imageInput")
+            }
+
+            let table = document.getElementById("table");
+            let tr = document.createElement("tr");
+            let id = car.name.value + "id";            
+            tr.id = id;
+            let tdName = document.createElement("td");
+            tdName.innerText = car.name.value;
+            let tdModel = document.createElement("td");
+            tdModel.innerText = car.model.value;
+            let tdPrice = document.createElement("td");
+            tdPrice.innerText = car.price.value;
+            let tdImage = document.createElement("td");
+            let imageElement = document.createElement("img");
+            imageElement.src = car.image.value;
+            imageElement.style = "width:50px";
+
+            let tdButton = document.createElement("td");
+            let button = document.createElement("button");
+            button.innerText = "Sil";
+            button.addEventListener('click', function handleClick(event) {
+                deleteCar(id);
+            });
+
+            tdButton.appendChild(button);
+
+            tdImage.appendChild(imageElement);
+            tr.appendChild(tdName);
+            tr.appendChild(tdModel);
+            tr.appendChild(tdPrice);
+            tr.appendChild(tdImage);
+            tr.appendChild(tdButton);
+            table.appendChild(tr);    
+
+            //localStorage.setItem("Araba", JSON.stringify(car));
+            //localStorage.getItem("Araba");
+            car.name.value = "";
+            car.model.value = "";
+            car.price.value = "";
+            car.image.value = "";            
+        }
+
+        function showMeFile(event){
+            console.log(event.target.files);
+        }
+
+        function deleteCar(id){
+            let element = document.getElementById(id);
+            element.remove();
+        }
+    </script>
+
+    <script>
+
+// function addTodo(){
+//     let ulElement = document.getElementById("ulElement");
+
+//     let todo = document.getElementById("todo");
+//     let liElement = document.createElement("li");
+//     let pElement = document.createElement("p");
+//     pElement.innerText = todo.value;
+//     pElement.style = "background-color:red;color: white;"
+//     liElement.appendChild(pElement);
+//     ulElement.appendChild(liElement);
+//     todo.value = "";
+// }
+
+        // let car =  {
+        //         name: "Peugeot",
+        //         model: 2023,
+        //         weight: "850kg",
+        //         color: "red",
+        //         image: "https://files.sikayetvar.com/model/1141/peugeot-3008-0-1.jpg"
+        //     };
+
+        // let imageElement = document.getElementById("image");
+        // imageElement.src = car.image;
+
+        // let name = document.getElementById("nameTd");
+        // let model = document.getElementById("modelTd");
+        // let weight = document.getElementById("weightTd");
+        // let color = document.getElementById("colorTd");
+
+        // name.innerText = car["name"] //car[0].name;
+        // model.innerText = car.model;
+        // weight.innerText = car.weight;
+        // color.innerText = car.color;
+
+
+        //CallBack function
+
+        // let person = {
+        //     firstName: "Taner",
+        //     lastName: "Saydam",
+        //     age: 34,
+        //     profession: "Software Trainer",
+        //     fullName: function(){
+        //         return this.firstName + " " + this.lastName
+        //     }//callback function
+        // }
+
+        // document.getElementById("h2").innerText = 
+        // person.fullName()
+
+
+    //     function gunleriYaz(){
+    //     console.log("Pazartesi")
+    //     setTimeout(() => {
+    //         console.log("Salı")
+    //     }, 2000);        
+    //     console.log("Çarşamba")
+    // }
+
+
+
+    
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Data Types</h1>
+    <ol>
+        <li>String
+            <p>Metinsel değerler</p>
+        </li>
+        <li>Number
+            <p>Numaretik değerler</p>
+        </li>
+        <li>Boolean
+            <p>true ya da false döner</p>
+            <p>Doğru ya da yanlış ifadesidir</p>
+            <p>0 - 1 => 0 yanlış, 1 doğru</p>
+        </li>
+        <li>Undefined
+            <p>JS de geçer</p>
+            <p>Hiç yok manasına gelir</p>
+        </li>
+        <li>Null
+            <p>Var ama içi boş manasına gelir</p>
+            <p>Tipi tanımlanmamış!</p>
+        </li>
+        <li>Object
+            <p>Birden fazla değişkeni tek değişkende toplayabilmemizi sağlıyor</p>
+        </li>        
+        <li>Date
+            <p>Tarih formatıdıır</p>
+            <p>28.01.2023 => güngün.ayay.yılyılyılyıl => gün.ay.yıl</p>
+            <p>2023-01-28 => yılyılyılyıl-ayay-güngün => yıl-ay-gün</p>
+            <p>y => year, M=> mounth, d=> day</p>
+            <p>H=> h=> hour, m=>minute, s=> saniye,0=> milisaniye</p>
+            <p>2023-01-28 10:53:00.025</p>
+            <p>yyyy-MM-dd HH:mm:ss.000</p>
+        </li>
+    </ol>    
+
+    <script>        
+        let string = "Taner";
+        console.log(typeof(string));
+
+        let number = 10;
+        console.log(typeof(number));
+
+        let boolean = true;
+        console.log(typeof(boolean));
+
+        let sundefined;
+        console.log(typeof(sundefined));
+
+        let snull = null;
+        console.log(typeof(snull));
+
+        let object = { //object
+            firstName: "", //property
+            lastName: "", //property
+            age: 10, //property
+            isActive: true //property
+        }
+
+        console.log(typeof(object))
+
+        let date = new Date("2023-01-28 11:03:00.105")
+        console.log(date)
+
+        const dataBaseName = "asasddasdasd"
+
+        let dataBase = dataBaseName;
+        let dataBase1 = dataBaseName;
+        let dataBase2 = dataBaseName;
+        let dataBase3= dataBaseName;
+
+        //yyyy-MM-dd 
+        //yyyy-MM => 2023-01
+        //yyyy-MMM => 2023-Jun
+        //yyyy-MMMM => 2023-January
+        //yyyy-MM-dd => 2023-01-28
+        //yyyy-MM-ddd => 2023-01-Sat
+        //yyyy-MM-dddd => 2023-01-Saturday
+        //dddd => Saturday => 6                    
+    </script>
+</body>
+</html>

@@ -103,7 +103,7 @@
             </script>
         </li>
     </ul> -->
-    Ürün Fiyatı
+    <!-- Ürün Fiyatı
     <input type="text" id="priceInput" value="100000,25">
     <script>
         let priceInput = document.getElementById("priceInput");
@@ -114,8 +114,153 @@
         console.log(typeof(a))
         console.log(typeof(+a))
         //console.log(+price / 10);
-    </script>
+    </script> -->
 
     <!-- boolean => 0 || 1 => 0 = false; || 1 = true; -->
+
+
+    <h1>Şart Operatörü</h1>
+    <table>
+        <tr>
+            <th>Operatör</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>==</td>
+            <td>Değer eşit mi?</td>
+        </tr>
+        <tr>
+            <td>===</td>
+            <td>Tip ve değer eşit mi?</td>
+        </tr>
+        <tr>
+            <td>!=</td>
+            <td>Değer eşit değil mi?</td>
+        </tr>
+        <tr>
+            <td>!==</td>
+            <td>Değer ve tip eşit değil mi?</td>
+        </tr>
+        <tr>
+            <td>></td>
+            <td>Değer büyük mü</td>
+        </tr>
+        <tr>
+            <td><</td>
+            <td>Değer küçük mü</td>
+        </tr>
+        <tr>
+            <td>>=</td>
+            <td>Değer büyük veya eşit mi</td>
+        </tr>
+        <tr>
+            <td><=</td>
+            <td>Değer küçük veya eşit mi</td>
+        </tr>
+        <tr>
+            <td>&&</td>
+            <td>ve kontrolü operatörü</td>
+        </tr>
+        <tr>
+            <td>||</td>
+            <td>veya kontrolü operatörü</td>
+        </tr>
+    </table>
+
+
+
+    <script>
+        let x = 10;
+        let y = 10;
+        let z = 10;
+        let t;
+        let u = null;
+        // == operatörü
+        // bu operatör sadece verinin doğru olmasını ister
+        // if(x == y){
+        //     console.log("x değeri y ye eşit!");
+        // }else{
+        //     console.loh("x değeri y ye eşit değil!")
+        // };
+
+        // === operatörü
+        // bu operatör hem verinin doğru olması hem tiğin doğru olmasını ister
+        // if(x === y){
+        //     console.log("x değeri y ye eşit!");
+        // }else{
+        //     console.log("x değeri y ye eşit değil!")
+        // };
+
+        // != operatörü
+        // bu operatör kendinden sonra gelen değerin olumsuz olduğunu kontrol eder
+        // if (x != y) {
+        //     console.log("x değeri y ye eşit değil !!")
+        // } else {
+        //     console.log("x değeri y ye eşit!");
+        // }
+
+        // !==
+        // if (x !== y) {
+        //     console.log("x ve değeri doğru değil")
+        // } else {
+        //     console.log("x ve değeri doğru!!")
+        // }
+
+        // if(x == y){
+        //     console.log("x ve değeri aynı!")
+        // }
+
+        // if(x !== y || x==y){
+        //     console.log("x ve tipi aynı değil ama değerleri eşit")
+        // }
+
+        // > Operatörü
+        // bu operatör verilen değerlerden diğerinin büyük olup olmadığını denetliyor
+        // if (x > y) {
+        //     console.log("x değeri y den büyük!");
+        // } else {
+        //     console.log("x değeri y büyük değil!");
+        // }
+
+        // < Operatörü
+        // bu operatör verilen değerden diğerinin küçük olup olmadığını kontrol eder
+        // if (x < y) {
+        //     console.log("x değeri y den küçük!");
+        // } else {
+        //     console.log("x değeri y den küçük değil!");
+        // }
+
+        // >= Operatörü
+        // bu operatör verilen değerin büyük veya eşit mi olduğunu kontrol eder
+        // if (x >= y) {
+        //     console.log("x değeri y den büyük veya eşit!");
+        // } else {
+        //     console.log("x değeri y den büyük veya eşit değil!");
+        // }
+
+        //<= Operatörü
+        //bu operatör verilen değerin küçük veya eşit mi olduğunu kontrol eder
+        // if (x <= y) {
+        //     console.log("x değeri y den küçük veya eşit!");
+        // } else {
+        //     console.log("x değeri y den küçük veya eşit değil!");
+        // }
+
+        // ? ternary operatörü
+        // null kontrolü 
+
+            // console.log(t);
+            // console.log(u);
+            // console.log(t?.toString());
+
+        // && => ve operatörüdür ve şartın devamını ister
+        // || => veya operatörüdür ve şartlardan birinin sağlanmasını ister
+        // if (x > y || (x == y && x == z)) { //x >= y
+        //     console.log("x yden büyük veya eşit")
+        // } else {
+            
+        // }
+      
+    </script>
 </body>
 </html>
