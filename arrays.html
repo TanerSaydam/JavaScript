@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <input id="input" type="text">
+    <button id="btn" onclick="addArray()">Kaydet</button>
+
+    <script>
+        // let x = {
+        //     name: "Taner"
+        // };
+
+        // let y= "Saydam";
+
+        // let array = [
+        //     x,y
+        // ]
+
+
+        // let array = [
+        //     10, //number
+        //     true, //boolean
+        //     new Date(), //date
+        //     "Volvo", //string
+        //     "Togg", //string
+        //     {
+        //         name: "Taner"
+        //     }
+        // ]
+
+        // const array = [
+        //     "Taner",
+        //     "Ahmet"
+        // ]
+
+        // const x = "";
+        // x = "asd";
+
+        // const array = [];
+        // array.push("Taner");
+        // array.push("Ahmet");
+        // array.push("Ayşe");
+
+        // console.log(array.indexOf("Ahmet"));;
+        // console.log(array[array.indexOf("Ahmet")]);
+        
+
+        // array[0] = "Seval";
+        
+        // console.log(array);
+
+        // console.log(array.length);
+        // console.log(array.sort())
+
+        let array = [];
+        function addArray(){
+            let input = document.getElementById("input");
+            array.push(input.value);
+            input.value = "";
+            localStorage.setItem("names",array);
+        }
+
+    </script>
+</body>
+</html>

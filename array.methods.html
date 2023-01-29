@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Methods</h1>
+    <ul>
+        <li>
+            <h4>toString()</h4>
+            <script>
+                let fruits = ["Ayva","Elma","Muz","Armut"];
+                console.log(`toString Result: ${fruits.toString()}`);
+            </script>
+        </li>
+        <li>
+            <h4>join()</h4>
+            <script>
+                console.log(`join Result: ${fruits.join(" * ")}`)
+            </script>
+        </li>
+        <li>
+            <h4>pop()</h4>
+            <script>
+                 console.log(fruits);
+                // fruits.pop();
+                // fruits.pop();
+                // fruits.pop();
+                // console.log(fruits);
+            </script>
+        </li>
+        <li>
+            <h4>push()</h4>
+            <script>
+                // fruits.push("Kiraz");
+                // console.log(fruits)
+            </script>
+        </li>
+        <li>
+            <h4>shift()</h4>
+            <script>
+                // fruits.shift();
+                // console.log(fruits);
+            </script>
+        </li>
+        <li>
+            <h4>unshift()</h4>
+            <script>
+                // fruits.unshift("Karpuz");
+                // console.log(fruits);
+            </script>
+        </li>
+        <li>
+            <h4>splice()</h4>
+            <script>
+                //silme ve ekleme işlemi
+                // fruits.splice(2,1,"Liman","Kivi");
+                // console.log(fruits);
+
+                // fruits.splice(2,1);
+                // console.log(fruits);
+            </script>
+        </li>
+        <li>
+            <h4>slice()</h4>
+            <script>               
+                let newArray = fruits.slice(2);
+                console.log(newArray);
+            </script>
+        </li>
+    </ul>
+
+    <p id="test">
+
+    </p>
+    
+
+    <p id="test2">
+
+    </p>
+    
+
+    <script>
+        let text = "<ul>";
+        fruits.forEach(myFunction);
+        text += "</ul>";
+            let element = document.getElementById("test");
+            element.innerHTML = text;
+        function myFunction(value){
+            text += "<li>" + value + "</li>";
+        }
+    </script>
+
+    <script>
+        let text1 = "<ul>";
+            fruits.forEach((value)=>{
+                text += "<li>" + value + "</li>";
+            })
+        text1 += "</ul>";
+
+        let element2 = document.getElementById("test2");
+            element2.innerHTML = text;
+        
+    </script>
+    
+</body>
+</html>

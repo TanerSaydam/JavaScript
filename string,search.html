@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document
+    </title>
+    <script src="./trLowerCase.js"></script>
+</head>
+
+<body>
+    <h1>String Search</h1>
+    <ul>
+        <li>
+            <h4>IndexOf</h4>
+            <script>
+                let str = "Lorem ipsum dolor sit."
+                console.log(
+                    `IndexOf Result: ${str.indexOf("o")}`
+                )
+
+                console.log(
+                    `IndexOf Result2: ${str.indexOf("dolor", 11)}`
+                )
+            </script>
+        </li>
+        <li>
+            <h4>LastIndexOf</h4>
+            <script>
+                console.log(
+                    `LastIndexOf Result: ${str.lastIndexOf("o")}`
+                )
+
+                // let file = "test.jpeg";
+                // let lastIndex = file.lastIndexOf(".");
+                // let fileFormat = file.substring(lastIndex);
+                // console.log(fileFormat);
+                // console.log(file.substring(0,lastIndex));
+            </script>
+        </li>
+        <li>
+            <h4>Search</h4>
+            <script>
+                console.log(
+                    `Search Result: ${str.search("ipsum")}`
+                )
+            </script>
+        </li>
+        <li>
+            <h4>Match</h4>
+            <script>
+                console.log(
+                    `Match Result: ${str.match("i")}`
+                )
+
+                // console.log(
+                //     str.match("i")
+                // )
+            </script>
+        </li>
+        <li>
+            <h4>Includes</h4>
+            <script>
+                // let list = str.split("");
+
+                // console.log(list);
+
+                // console.log(
+                //     `Includes Result: ${list.includes("i")}`
+                // )
+
+                console.log(
+                    `Includes Result: ${str.includes("ipsum")}`
+                )
+            </script>
+        </li>
+        <li>
+            <h4>StartsWith</h4>
+            <script>
+                console.log(
+                    `StartsWith Result: ${str.toLowerCase().startsWith("L".toLocaleLowerCase())}`
+                )
+            //     //10000,25 => 10.000,25 ₺
+            //     // ₺10,000.25
+            //    let newResult = toTrLowerCase("Tİnİr Saydam")
+            //    console.log(newResult);               
+            </script>
+        </li>
+        <li>
+            <h4>EndsWith</h4>
+            <script>
+                console.log(
+                    `EndsWith Result: ${str.toLocaleLowerCase().endsWith("L".toLocaleLowerCase())}`
+                )
+
+                // console.log(
+                //     `${"I".toLocaleLowerCase()}`
+                // )
+            </script>
+        </li>
+    </ul>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>

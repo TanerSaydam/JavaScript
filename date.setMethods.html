@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Date Set Methods</h1>
+    <script>
+        const date = new Date("2023-03-15");       
+        console.log("----------------"); 
+
+        console.log("Yıl: " + date.getFullYear());
+        date.setFullYear(2025);
+        console.log("Yeni Yıl: " + date.getFullYear());
+        console.log("----------------");
+
+        console.log("Ay: " + date.getMonth());
+        date.setMonth(3);
+        console.log("Yeni Ay: " + date.getMonth());
+        console.log("----------------");
+
+        console.log("Gün: " + date.getDate());
+        date.setDate(16);
+        console.log("Yeni Gün: " + date.getDate());
+        console.log("----------------");
+
+        console.log("Saat: " + date.getHours());
+        date.setHours(4);
+        console.log("Yeni Saat: " + date.getHours());
+        console.log("----------------");
+
+        console.log("Dakika: " + date.getMinutes());
+        date.setMinutes(5);
+        console.log("Dakika: " + date.getMinutes());
+        console.log("----------------");
+
+        console.log("Saniye: " + date.getSeconds());
+        date.setSeconds(59);
+        console.log("Saniye: " + date.getSeconds());
+        console.log("----------------");
+
+        console.log("Milisaniye: " + date.getMilliseconds());
+        date.setMilliseconds(500);
+        console.log("Milisaniye: " + date.getMilliseconds());
+        console.log("----------------");
+
+
+       
+
+       
+
+        
+
+
+
+        
+    </script>
+</body>
+</html>

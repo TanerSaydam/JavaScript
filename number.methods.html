@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Number Methods</h1>
+    <ul>
+        <li>
+            <h4>toString</h4>
+            <script>
+                let x = 10;
+                console.log(typeof(x));
+                console.log(typeof(x.toString()));
+            </script>
+        </li>
+        <li>
+            <h4>Fixed</h4>
+            <script>
+                let a = 10.25454654;
+                console.log(a.toFixed(3))
+            </script>
+        </li>
+        <li>
+            <h4>Precision</h4>
+            <script>
+                console.log(a.toString().length);
+                console.log(a.toPrecision(7));
+            </script>
+        </li>
+        <li>
+            <h4>Number</h4>
+            <script>
+                let age = "  10.55 ";
+                console.log(typeof(age));
+                console.log(typeof(Number(age)));
+                console.log(Number(age));
+            </script>
+        </li>
+        <li>
+            <h4>Date Number</h4>
+            <script>               
+                console.log(new Date(2023,01,29,12,01,10,500));
+                console.log(Number(new Date(2023,01,29)));
+                //01.01.1970 => milisaniye
+            </script>
+        </li>
+        <li>
+            <h4>ParseInt</h4>
+            <script>
+                let n = 10.2544;
+                console.log(parseInt(n/2));
+            </script>
+        </li>
+        <li>
+            <h4>ParseFloat</h4>
+            <script>
+                console.log(parseFloat(n/2));
+            </script>
+        </li>
+    </ul>
+</body>
+</html>

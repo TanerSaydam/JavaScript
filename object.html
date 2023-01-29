@@ -7,8 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
-<script src="./node_modules/exceljs/dist/exceljs.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <script>
+        function exportReportToExcel() {
+            let table = document.getElementById("table"); // you can use document.getElementById('tableId') as well by providing id to the table tag
+            TableToExcel.convert(table, { // html code may contain multiple tables so here we are refering to 1st table tag
+                name: `export.xlsx`, // fileName you could use any name
+                sheet: {
+                    name: 'Sheet 1' // sheetName
+                }
+            });
+        }
+
+        function exportExcel2() {
+            debugger
+            var data = [
+                ["Name", "Email"],
+                ["Job Doe", "job@doe.com"],
+                ["Joe Doe", "joe@doe.com"],
+                ["Jon Doe", "jon@doe.com"],
+                ["Joy Doe", "joy@doe.com"]
+            ];
+
+            var workbook = XLSX.utils.book_new(),
+                worksheet = XLSX.utils.aoa_to_sheet(data);
+            workbook.SheetNames.push("First");
+            workbook.Sheets["First"] = worksheet;
+            XLSX.writeFile(workbook, "demo.xlsx");
+        }
+    </script>
 
     <style>
         div {
@@ -24,15 +54,17 @@
             display: flex;
         }
 
-        .col{
+        .col {
             width: 50;
         }
 
-        table, td, th{
+        table,
+        td,
+        th {
             border: 1px solid;
         }
 
-        table{
+        table {
             width: 100%;
             border-collapse: collapse;
         }
@@ -79,7 +111,7 @@
     <div class="row">
         <div class="col">
             Araba Adı:
-            <input  id="name">
+            <input id="name">
             <br>
             Araba Modeli
             <input id="model">
@@ -94,20 +126,22 @@
             <br>
             <button onclick="addCar()">Arabayı Listeye Ekle</button>
         </div>
-        <div class="col" style="display:flex">            
-            <img id="image" src="https://www.cumhuriyet.com.tr/Archive/2021/11/29/1888598/kapak_112247.jpg" alt="" width="250">            
+        <div class="col" style="display:flex">
+            <img id="image" src="https://www.cumhuriyet.com.tr/Archive/2021/11/29/1888598/kapak_112247.jpg" alt=""
+                width="250">
         </div>
     </div>
     <hr>
-    <button onclick="creatExcel()">Exceli indir</button>
-    <table id="table">
-        <tr>
+    <button onclick="exportReportToExcel()">Exceli indir</button>
+    <button onclick="exportExcel2()">Exceli indir 2</button>
+    <table id="table" data-cols-width="15,15,15,15,15" data-b-a-s="thin,thin,thin,thin,thin">
+        <tr data-height="20">
             <th>Adı</th>
             <th>Modeli</th>
             <th>Fiyatı</th>
             <th>Resmi</th>
             <th>İşlemler</th>
-        </tr>        
+        </tr>
     </table>
 
     <script>
@@ -126,17 +160,17 @@
         // }
 
 
-        function setCarImage(event){
+        function setCarImage(event) {
             let imageInput = document.getElementById("imageInput").value;
             let image = document.getElementById("image").src = imageInput;
             //     console.log(event);
             //     if(event.keyCode == 98){
-                
+
             //     console.log(imageInput)
             // }
         }
 
-        function addCar(){
+        function addCar() {
             let car = {
                 name: document.getElementById("name"),
                 model: document.getElementById("model"),
@@ -146,7 +180,7 @@
 
             let table = document.getElementById("table");
             let tr = document.createElement("tr");
-            let id = car.name.value + "id";            
+            let id = car.name.value + "id";
             tr.id = id;
             let tdName = document.createElement("td");
             tdName.innerText = car.name.value;
@@ -174,21 +208,21 @@
             tr.appendChild(tdPrice);
             tr.appendChild(tdImage);
             tr.appendChild(tdButton);
-            table.appendChild(tr);    
+            table.appendChild(tr);
 
             //localStorage.setItem("Araba", JSON.stringify(car));
             //localStorage.getItem("Araba");
             car.name.value = "";
             car.model.value = "";
             car.price.value = "";
-            car.image.value = "";            
+            car.image.value = "";
         }
 
-        function showMeFile(event){
+        function showMeFile(event) {
             console.log(event.target.files);
         }
 
-        function deleteCar(id){
+        function deleteCar(id) {
             let element = document.getElementById(id);
             element.remove();
         }
@@ -243,7 +277,7 @@
         //     }//callback function
         // }
 
-        // document.getElementById("h2").innerText = 
+        // document.getElementById("h2").innerText =
         // person.fullName()
 
 
@@ -251,13 +285,13 @@
     //     console.log("Pazartesi")
     //     setTimeout(() => {
     //         console.log("Salı")
-    //     }, 2000);        
+    //     }, 2000);
     //     console.log("Çarşamba")
     // }
 
 
 
-    
+
 
     </script>
 </body>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String Methods</h1>
+    <ul>
+        <li>
+            <h4>String Length</h4>
+            <script>
+                let name = "Taner Saydam";
+                //console.log("Length Result: " + name.length);
+                console.log(`Length Result: ${name.length}`);
+            </script>
+        </li>
+        <li>
+            <h4>String slice</h4>
+            <script>
+                let text = "Apple, Banana, Kiwi";
+                let part = text.slice(7,13);
+                console.log(`Slice Result: ${part}`)
+
+                let part2 = text.slice(7);
+                console.log(`Slice Result2: ${part2}`)
+
+                let part3 = text.slice(-12,-6);
+                console.log(`Slice Result2: ${part3}`)
+            </script>
+        </li>
+        <li>
+            <h4>String SubString</h4>
+            <script>
+                let text2 = "Apple, Banana, Kiwi";
+                let part4 = text2.substring(7,13);
+                console.log(`Substring Result: ${part4}`)
+
+                let part5 = text2.substring(-12,-6);
+                console.log(`Substring Result: ${part5}`)
+            </script>
+        </li>
+        <li>
+            <h4>String Replace</h4>
+            <script>
+                let carName = "$RenI$";
+                console.log(`Replace Result: ${carName.replace("$","")}`)               
+            </script>
+        </li>
+        <li>
+            <h4>String ReplaceAll</h4>
+            <script>
+                console.log(`ReplaceAll Result: ${carName.replaceAll("$","")} `)
+            </script>
+        </li>
+        <li>
+            <h4>String TpUppercase</h4>
+            <script>
+                console.log(`ToUpperCase Result: ${carName.toUpperCase()}`)
+            </script>
+        </li>
+        <li>
+            <h4>String ToLowerCase</h4>
+            <script>
+                console.log(`ToLowerCase Result: ${carName.toLocaleLowerCase()}`)
+            </script>
+        </li>
+        <li>
+            <h4>String Concat</h4>
+            <script>
+                let x = "Taner";
+                let y = "Saydam";
+                let z = 10;
+                // console.log(x + " " + y);
+                // console.log(`${x} ${y}`);
+                console.log(`Concat Result: ${x.concat(" ", y," yaşı ", z)}`);
+            </script>
+        </li>
+        <li>
+            <h4>String Trim</h4>
+            <script>
+                let t = "      Taner       ";
+                console.log(`Trim Result: ${t.trim()}`)
+            </script>
+        </li>
+        <li>
+            <h4>String TrimStart</h4>
+            <script>
+                console.log(`TrimStart Result: ${t.trimStart()}`)
+            </script>
+        </li>
+        <li>
+            <h4>String TrimEnd</h4>
+            <script>
+                console.log(`TrimgEnd Result: ${t.trimEnd()}`)
+            </script>
+        </li>
+        <li>
+            <h4>String PadStart</h4>
+            <script>
+                let number = 5;
+                console.log(
+                    `PadStart Result: ${number.toString().padStart(9,"0")}`)
+            </script>
+        </li>
+        <li>
+            <h4>String PadEnd</h4>
+            <script>
+                console.log(
+                    `PadEnd Result: ${number.toString().padEnd(9,"0")}`
+                )
+            </script>
+        </li>
+        <li>
+            <h4>String ChartAt</h4>
+            <script>                
+                console.log(`ChartAt Result: ${x.charAt(4)}`)
+            </script>
+        </li>
+        <li>
+            <h4>Porperty Access</h4>
+            <script>
+                console.log(
+                    `Property Access Result : ${x[4]}`
+                )
+            </script>
+        </li>
+        <li>
+            <h4>String CharCodeAt</h4>
+            <script>
+                console.log(
+                    `CharCodeAt Result: ${"y".charCodeAt(0)}`
+                )
+            </script>
+        </li>
+        <li>
+            <h4>String Split</h4>
+            <script>
+                console.log(
+                    `Split Result: ${name.split("")}`
+                )
+                console.log(
+                    `Split Result2: ${name.split("",5)}`
+                )
+
+                console.log(
+                    name.split("",5)
+                )
+            </script>
+        </li>
+    </ul>
+</body>
+</html>
