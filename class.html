@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Class</h1>
+    <script>
+        //let car = {name:"string",model:2000};
+
+        class Car{            
+            constructor(name,model){
+                this.name = name;
+                this.model = model;
+            }
+            name;
+            model;
+        } //obje
+        
+        car = [
+            new Car("Fiat",2000),
+            new Car("Audi",2015),
+            new Car("Porche",2022)
+        ]
+
+        console.log(car[1].name);
+        
+
+        //car = new Car("Taner",2000); //nesne
+        //oop nesne yönelimli programlama 
+        // car.name = "asdasd";
+        // car.model = 2000;
+        console.log(car.name);
+    </script>
+</body>
+</html>

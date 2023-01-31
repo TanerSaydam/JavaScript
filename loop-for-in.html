@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loop For In</h1>
+    <script>
+        // const person = {name: "Taner", lastName: "Saydam", age: 34};
+        // let text = "";
+        // for (let x in person){
+        //     //console.log(x);
+        //     //console.log(person["name"]);
+        //     text += person[x] + " "
+        // }
+
+        // console.log(text)
+    </script>
+
+    <h2>Array.forEach()</h2>
+    <script>
+        // let numbers = [1,5,10,25];
+        // let sum = 0;
+        // numbers.forEach(x=>{
+        //     sum += x
+        // })
+
+        // console.log(sum);
+
+
+        const persons = [
+            {name: "Taner",lastName:"Saydam"},
+            {name: "Tugay",lastName:"Saydam"},
+            {name: "Toprak",lastName:"Saydam"},
+            {name: "Ahmet",lastName:"Saydam"},
+            {name: "Ayşe",lastName:"Saydam"},
+            {name: "Yılmaz",lastName:"Saydam"},
+        ]
+
+        persons.forEach(p => {
+            console.log(p["name"] + " " + p["lastName"])
+        })
+    </script>
+</body>
+</html>

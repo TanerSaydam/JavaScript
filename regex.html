@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>RegExp</h1>
+    <input type="text" id="input" onkeyup="checkRegExp()">    
+    <script>
+        function checkRegExp(){
+            let element = document.getElementById("input");            
+            let lastWord = element.value.substring(
+                element.value.length-1
+            );
+            var reg = new RegExp("^[0-9]+$");
+            var result = reg.test(lastWord);
+            if(!result){
+                element.value = element.value.substring(0,element.value.length-1);
+            }            
+        }
+        
+    </script>
+</body>
+</html>

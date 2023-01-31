@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JSON</h1>
+    <script>
+        let text = `
+        {
+    "property":"value",
+    "property2": [
+        {"property3": "value"},
+        {"property3": "value"},
+        {"property3": "value"},
+        {"property3": "value"},
+        {"property3": "value"}
+    ],
+    "property":{
+        "property":{
+            "property":"value"
+        }
+    }
+}`
+
+        let json = JSON.parse(text);
+        let string = JSON.stringify(json);
+        console.log(json);
+        console.log(text);
+    </script>
+</body>
+
+</html>

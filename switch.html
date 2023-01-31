@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Switch</h1>
+    <pre>
+        <code>
+            switch(değer){
+                case kontrol şartı:
+                //şart sağlanıyorsa
+                break;
+                case kontrol şartı:
+                //şart sağlanıyorsa
+                break;
+                default: 
+                //hiçbir şart sağlanmazsa                
+            }
+        </code>
+    </pre>
+
+    <script>
+        switch(new Date().getDay()){
+            case 0:
+                console.log("Bugün pazar");
+                break;
+            case 1:
+                console.log("Bugün pazartes");
+                break;
+            case 2:
+                console.log("Bugün salı");
+                break;
+            case 3:
+                console.log("Bugün çarşamba");
+                break;
+            case 4:
+                console.log("Bugün perşembe");
+                break;
+            case 5:
+                console.log("Bugün cuma");
+                break;
+            default:
+                console.log("Bugün cumartesi");
+        }     
+
+        let day = new Date().getDay();
+        if(day == 0){
+            console.log("Bugün pazar");
+        }else if(day == 1){
+            console.log("Bugün pazartes");
+        }else if(day == 2){
+            console.log("Bugün salı");
+        }else if(day == 3){
+            console.log("Bugün çarşamba");
+        }else if(day == 4){
+            console.log("Bugün perşembe");
+        }else if(day == 5){
+            console.log("Bugün cuma");
+        }else {
+            console.log("Bugün cumartesi");
+        }
+    </script>
+</body>
+</html>

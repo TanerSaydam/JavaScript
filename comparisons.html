@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            border: 1px solid;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comparisons</h1>
+    <script>
+        let x = "8";
+        let y= 18;
+    </script>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Comparing</th>
+                <th>Retruns</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>==</th>
+                <th>Eşit mi? (değerler eşit mi?)</th>
+                <th>x == 8</th>
+                <th id="th1"></th>
+                <script>
+                    document.getElementById("th1").innerText = (x == 8)
+                </script>
+            </tr>
+            <tr>
+                <th>===</th>
+                <th>Eşit mi? (değerler ve tip eşit mi?)</th>
+                <th>x === 8</th>
+                <th id="th2"></th>
+                <script>
+                    document.getElementById("th2").innerText = (x === 8);
+                </script>
+            </tr>
+            <tr>
+                <th>!=</th>
+                <th>Eşit değil mi? (değerler eşit değil mi?)</th>
+                <th>x != 8</th>
+                <th id="th3"></th>
+                <script>
+                    document.getElementById("th3").innerText = (x != 8);
+                </script>
+            </tr>
+            <tr>
+                <th>!==</th>
+                <th>Eşit değil mi? (değerler ve tipi eşit değil mi?)</th>
+                <th>x !== 8</th>
+                <th id="th4"></th>
+                <script>
+                    document.getElementById("th4").innerText = (x !== 8);
+                </script>
+            </tr>
+            <tr>
+                <th>></th>
+                <th>Büyük mü?</th>
+                <th>x > 8</th>
+                <th id="th5"></th>
+                <script>
+                    document.getElementById("th5").innerText = (x > 8);
+                </script>
+            </tr>
+            <tr>
+                <th><</th>
+                <th>Küçük mü?</th>
+                <th>x < 8</th>
+                <th id="th6"></th>
+                <script>
+                    document.getElementById("th6").innerText = (x < 8);
+                </script>
+            </tr>
+            <tr>
+                <th>>=</th>
+                <th>Büyük eşit mi?</th>
+                <th>x >= 8</th>
+                <th id="th7"></th>
+                <script>
+                    document.getElementById("th7").innerText = (x >= 8);
+                </script>
+            </tr>
+            <tr>
+                <th><=</th>
+                <th>Küçük eşit mi?</th>
+                <th>x <= 8</th>
+                <th id="th8"></th>
+                <script>
+                    document.getElementById("th8").innerText = (x <= 8);
+                </script>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <ul>
+        <li>
+            ((x <= 8) && (x > 7))
+            <p id="p1"></p>
+            <script>
+                document.getElementById("p1").innerText = 
+                    ((x <= 8) && (x > 7))
+            </script>
+        </li>
+        <li>
+            (((x > 8) || x == 8) && x > 0)
+            <p id="p2"></p>
+            <script>
+                document.getElementById("p2").innerText =
+                    (((x > 8) || x == 8) && x > 0)
+            </script>
+        </li>
+    </ul>
+
+    <h4>Single If Line ||Ternary Operator</h4>
+    <p id="p3"></p>
+    <script>
+        let element = document.getElementById("p3");
+        element.innerText = ((((x > 8) || x == 8) && x > 0) ? "İzin verildi" : "İzin verilmedi!!");
+        //şartı => true / false ? şartı sağlıyorsa : şartı sağlamıyor
+    </script>
+
+    <hr>
+    <p id="p4"></p>
+    <script>
+        let element2 = document.getElementById("p4");
+        element2.innerText = 
+        (y >= 18 ? "Geçiş izniniz var!" : (y > 17 ? "Geçiş iznin için 1 senen var!" : "Geçiş iznine çok var!"));
+    </script>
+
+    <hr>
+    <h4>Null kontrolü</h4>
+    <p id="p5"></p>
+    <script>
+        let element3 = document.getElementById("p5");
+        element3.innerText = (null > 0 ? "null 0'dan büyük!" : (null < 0 ? "null 0'dan küçük!" : (null >= 0 ? "null 0'dan büyük veya eşit" : "bunların hiçbiri")));
+
+    </script>
+
+    
+    <hr>    
+    <p id="p6"></p>
+    <script>
+        const car = {type:"Fiat", model:"500", color:"White"};
+        document.getElementById("p6").innerText = 
+        car.name ? car.name : "yok";
+    </script>
+
+<p style="margin-bottom: 2000px;"></p>
+</body>
+</html>
