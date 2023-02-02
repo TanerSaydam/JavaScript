@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DOM Elements</h1>
+    <h2>Elementi ID'ye göre bulma</h2>
+    <p id="id">Lorem ipsum dolor sit.</p>
+    <script>
+        const element = document.getElementById("id");
+        console.log(element);
+    </script>
+    <hr>
+    <h2>Elementi TAG adına göre bulma</h2>
+    <p>Lorem ipsum dolor sit.</p>
+    <div id="div">
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+    <script>
+        //const element2 = document.getElementsByTagName("p");
+        //console.log(element2)
+        const element3 = document.getElementById("div");
+        const element4 = element3.getElementsByTagName("p");
+        console.log(element4);
+    </script>
+    <hr>
+    <h2>Class adına göre element bulma</h2>
+    <p class="intro">Lorem ipsum dolor sit.</p>
+    <p class="intro">Lorem ipsum dolor sit.</p>
+    <p class="intro">Lorem ipsum dolor sit.</p>
+    <p class="intro">Lorem ipsum dolor sit.</p>
+    <script>
+        const element5 = document.getElementsByClassName("intro");
+        console.log(element5);
+    </script>
+    <hr>
+    <h2>Selector'üne göre bulma</h2>
+    <p id="p1">Lorem, ipsum. Taner saydam</p>
+    <p class="p2">Lorem, ipsum.</p>
+    <h4>Lorem, ipsum.</h4>
+    <h4>Loreasdasdm, ipsum.</h4>
+    <script>
+        const element6 = document.querySelector("#p1");
+        console.log(element6);
+        const element7 = document.querySelector(".p2");
+        console.log(element7);
+        const element8 = document.querySelector("h4");
+        console.log(element8);
+        const element9 = document.querySelectorAll("h4");
+        element9.forEach(e=>{
+           e.setAttribute("class","intro");
+           e.removeAttribute("class") ;
+        })
+        console.log(element9);
+    </script>
+</body>
+
+</html>

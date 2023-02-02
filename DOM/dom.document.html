@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Document</h1>
+    <p>HTML DOM document nesnesi tüm sayfamızın sahibi bir nesnedir</p>
+    <div id="demo"></div>
+    <script>        
+        console.log(document);
+    </script>
+    <hr>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>document.getElementById(id)</td>
+            <td>Elementi ID'si üzerinden bulur. Aynı ID'ye sahip başka elementler varsa sadece ilkini getirir</td>
+        </tr>
+        <tr>
+            <td>document.getElementsByTagName(name)</td>
+            <td>Elementin tag adına göre elementleri bulur</td>
+        </tr>
+        <tr>
+            <td>document.getElementsByClassName(name)</td>
+            <td>Elementin class adına göre elementleri bulur</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>document.createElement(element)</td>
+            <td>Element oluşturur</td>
+        </tr>
+        <tr>
+            <td>document.remove(element)</td>
+            <td>Elementi siler</td>
+        </tr>
+        <tr>
+            <td>document.appendChild(element)</td>
+            <td>Elementin altına element ekler</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>document.getElementById(id).onclick = function() {code}</td>
+            <td>Elemente event atar</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>document.achors</td>
+            <td>a elementlerden name attribute'üne sahip olanları listeler
+                <a href="" name="test"></a>
+                <script>
+                    console.log(document.anchors);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>document.baseURI</td>
+            <td>Belgenin mutlak temel URI'sine ulaşmak istersem bunu kullanırım
+                <script>
+                    console.log(document.baseURI)
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>document.body</td>
+            <td>Body elementini dönderir
+                <script>
+                    console.log(document.body)
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>document.cookie</td>
+            <td>Belgenin çerezini dönerir
+                <script>
+                    console.log(document.cookie)
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>document.forms</td>
+            <td>Belgedeki tüm form elementlerini dönderir
+                <form action="">
+                    <label for=""></label>
+                    <input type="text" name="" id="">
+                </form>
+                <script>
+                    console.log(document.forms)
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>document.scripts</td>
+            <td>Tüm script elementlerini dönerir
+                <script>
+                    console.log(document.scripts)
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>document.URL</td>
+            <td>Belgenin tam URL'sini dönderir
+                <script>
+                    console.log(document.URL)
+                </script>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
